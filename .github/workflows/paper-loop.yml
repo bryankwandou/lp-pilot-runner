@@ -1,0 +1,50 @@
+name: Paper Loop 24/7
+
+# Paper trading LP Pilot, tick tiap 1 menit, tanpa laptop. Kode bot ada di repo privat dan diambil lewat
+# deploy key read-only; repo ini hanya berisi workflow. Tidak ada wallet atau kunci trading: bot hanya
+# membaca harga & fee pool Meteora, state disimpan di database.
+# Satu job jalan ±5 jam 50 menit lalu memicu job berikutnya; cron tiap jam menghidupkan lagi kalau rantai putus.
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: paper-loop
+  cancel-in-progress: false
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  loop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 358
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: bryankwandou/meteora-lp-bot
+          ssh-key: ${{ secrets.BOT_DEPLOY_KEY }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --omit=dev --prefix bot
+      - name: Tick tiap 1 menit selama ±5 jam 45 menit
+        working-directory: bot
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          test -n "$DATABASE_URL" || { echo "secret DATABASE_URL kosong"; exit 1; }
+          end=$(( $(date +%s) + 345*60 )); ok=0; fail=0
+          while [ $(date +%s) -lt $end ]; do
+            if timeout 240 node src/paper.mjs > tick.log 2>&1; then ok=$((ok+1)); else fail=$((fail+1)); tail -5 tick.log; fi
+            grep -E "equity" tick.log | tail -1
+            sleep 60
+          done
+          echo "selesai: $ok tick sukses, $fail gagal"
+      - name: Sambung ke job berikutnya
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run paper-loop.yml -R "$GITHUB_REPOSITORY"
