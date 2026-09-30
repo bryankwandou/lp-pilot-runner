@@ -1,0 +1,123 @@
+{
+ "at": "2026-09-30T15:45:44.735Z",
+ "cluster": "devnet",
+ "design": "faktorial",
+ "swapEntry": true,
+ "baseLiq": 200000,
+ "market": "acak",
+ "exits": [
+  "tahan"
+ ],
+ "pool": "Eqe8Rbvk6mBVR7LANdJGeXazVcE8eLZBmThuHJ263C96",
+ "traders": 3,
+ "cycles": 1,
+ "wallSec": 56,
+ "total": 3,
+ "ok": 3,
+ "failed": 0,
+ "rpcRetries": 0,
+ "orphansClosed": 0,
+ "orphansLeft": 0,
+ "volumeSwaps": 9,
+ "volumeSwapFails": 0,
+ "binStart": 0,
+ "binRange": [
+  -3,
+  6
+ ],
+ "maxRentSol": 0.041915,
+ "avgGasSol": 0.00002166666666666667,
+ "bySize": {
+  "20000": {
+   "n": 3,
+   "fees": 49.8864,
+   "pnl": -1319.3784,
+   "gas": 0.00006500000000000001
+  }
+ },
+ "mainWallet": {
+  "start": 29.3871824,
+  "afterFunding": 28.30154096,
+  "end": 29.20141596,
+  "spent": 0.185766
+ },
+ "results": [
+  {
+   "trader": 1,
+   "cycle": 0,
+   "usd": 20000,
+   "strategy": "Spot",
+   "width": 6,
+   "side": "quote",
+   "exit": "tahan",
+   "ok": true,
+   "sigOpen": "2p8MT4MUkp5PEKGBMi8U28XdF556eJAGPkfPr7DErwm3gKNPMYoUvgN2buf758ya8KYmHbicV5NGgmuLyKMuGVaA",
+   "rentSol": 0.04191,
+   "exitReason": "waktu",
+   "heldSec": 15.1,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "5dw1rGt89YiDfGf9CpNvVzaEcnSRZyrxDy6PJBnwd6wiY22fuMtM71pfh4Mx1VM3Sd9nKEA61cPGUUYK8xNygGkr"
+   ],
+   "closed": true,
+   "impactExitBins": 0,
+   "netSol": 0.000015,
+   "pnlUsd": 0,
+   "feesUsd": 0,
+   "sec": 36.1
+  },
+  {
+   "trader": 0,
+   "cycle": 0,
+   "usd": 20000,
+   "strategy": "Spot",
+   "width": 6,
+   "side": "dua",
+   "exit": "tahan",
+   "ok": true,
+   "impactEntryBins": 7,
+   "sigOpen": "5jDCZJEpdoTHRtRf8w1qHxGrzVCgSUjQciAFBWRziH8k2ZYV3uJTFdFGWxMKxsYjNZPPjV91UyBQFmgP7NYbexk7",
+   "rentSol": 0.041915,
+   "exitReason": "waktu",
+   "heldSec": 12.5,
+   "feeX": 50.01112,
+   "feeY": 0,
+   "sigExit": [
+    "4wQkwVYHwup943XEUCHj9LbUBZ11MEARD1cWae7Gyw8CSVwKRpGH35mesoijxoRT1RdRu6FxLAhgskdqGx7Lx2r6"
+   ],
+   "closed": true,
+   "impactExitBins": -2,
+   "netSol": 0.000025,
+   "pnlUsd": -405.0659,
+   "feesUsd": 49.8864,
+   "sec": 45.3
+  },
+  {
+   "trader": 2,
+   "cycle": 0,
+   "usd": 20000,
+   "strategy": "Spot",
+   "width": 6,
+   "side": "token",
+   "exit": "tahan",
+   "ok": true,
+   "impactEntryBins": 7,
+   "sigOpen": "226gWfeEXZhYwUys8DBsfRnu5TbEhYNsp3SxfxsGF1c2WBfZaTE3ZjpAzUDfpnoTFtWyKUszi7CfNuh4iJa1oQF9",
+   "rentSol": 0.041915,
+   "exitReason": "waktu",
+   "heldSec": 17.1,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "3D162tbXJafxAriP1Z33CCqeAF2YX9AioLWmw9ZzxhHGGAF6p7npsgjueESvi3vfxTGG8MLinPDbo1wdNRaHenX8"
+   ],
+   "closed": true,
+   "impactExitBins": -4,
+   "netSol": 0.000025,
+   "pnlUsd": -914.3125,
+   "feesUsd": 0,
+   "sec": 49.7
+  }
+ ]
+}
