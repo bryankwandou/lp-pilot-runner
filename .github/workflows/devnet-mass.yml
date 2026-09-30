@@ -25,6 +25,8 @@ jobs:
     timeout-minutes: 50
     strategy:
       fail-fast: false
+      # Sisakan slot untuk paper loop (1 job, harus selalu bisa jalan) dari batas 20 job serentak per akun.
+      max-parallel: 18
       matrix:
         market: ${{ fromJSON(inputs.markets) }}
         shard: ${{ fromJSON(inputs.shards) }}
