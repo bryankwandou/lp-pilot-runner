@@ -1,0 +1,78 @@
+name: Devnet Mass Test
+
+# Uji buka/tutup posisi DLMM NYATA di devnet dari banyak server sekaligus. Dipindah dari repo privat ke sini karena
+# repo publik tidak memakai kuota menit Actions (repo privat: 2000 menit/bulan ≈ 6 run penuh).
+# Kode bot diambil dari repo privat lewat deploy key read-only. Wallet (DEVNET_MASS_KEYPAIR) khusus devnet, bukan
+# mainnet; sisa SOL trader disapu balik ke wallet itu. Hasil (file JSON) disimpan ke folder devnet/ repo ini.
+# Batas paralel: GitHub Free = 20 job serentak untuk SEMUA repo satu akun (paper loop memakai 1), sisanya antre.
+on:
+  workflow_dispatch:
+    inputs:
+      markets: { description: "kondisi pasar (JSON)", default: '["acak","pump","dump","rug","sepi","tipis","whipsaw","pulih"]' }
+      shards: { description: "shard per pasar (JSON)", default: "[1,2,3]" }
+      traders: { description: "trader per shard", default: "3" }
+      cycles: { description: "siklus per trader", default: "8" }
+      sizes: { description: "ukuran posisi USDC uji", default: "10,15,50,75,750" }
+      sides: { description: "sisi deposit bergiliran: dua, quote (setara SOL side), token", default: "dua,quote,token" }
+      exits: { description: "aturan keluar bergiliran: tahan (jendela tetap), jaga (tutup saat keluar range)", default: "tahan,jaga" }
+
+permissions:
+  contents: write
+
+jobs:
+  shard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix:
+        market: ${{ fromJSON(inputs.markets) }}
+        shard: ${{ fromJSON(inputs.shards) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: bryankwandou/meteora-lp-bot
+          ssh-key: ${{ secrets.BOT_DEPLOY_KEY }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --prefix bot
+      - name: Uji massal devnet
+        working-directory: bot
+        env:
+          KEY: ${{ secrets.DEVNET_MASS_KEYPAIR }}
+          TRADERS: ${{ inputs.traders }}
+          CYCLES: ${{ inputs.cycles }}
+          SIZES: ${{ inputs.sizes }}
+          SIDES: ${{ inputs.sides }}
+          EXITS: ${{ inputs.exits }}
+          MARKET: ${{ matrix.market }}
+        run: |
+          test -n "$KEY" || { echo "secret DEVNET_MASS_KEYPAIR kosong"; exit 1; }
+          umask 077; printf '%s' "$KEY" > "$RUNNER_TEMP/k.json"
+          DEVNET_KEYPAIR="$RUNNER_TEMP/k.json" node src/devnet-mass.mjs
+          rm -f "$RUNNER_TEMP/k.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: devnet-mass-${{ matrix.market }}-${{ matrix.shard }}
+          path: bot/paper/devnet-mass-*.json
+
+  collect:
+    needs: shard
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: devnet
+          merge-multiple: true
+      - name: Simpan hasil ke repo
+        run: |
+          git config user.name "lp-pilot-bot"
+          git config user.email "lp-pilot-bot@users.noreply.github.com"
+          git add devnet/devnet-mass-*.json
+          git diff --cached --quiet && exit 0
+          git commit -m "devnet: uji massal run ${{ github.run_id }} $(date -u +%FT%TZ)"
+          git pull --rebase && git push
