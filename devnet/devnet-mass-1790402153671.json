@@ -1,0 +1,86 @@
+{
+ "at": "2026-09-26T05:55:53.669Z",
+ "cluster": "devnet",
+ "pool": "5SjDXPhjrcevQKeWaxPJZDK821iMHvGWonb4M8KkSasQ",
+ "traders": 2,
+ "cycles": 2,
+ "wallSec": 221,
+ "total": 4,
+ "ok": 1,
+ "failed": 3,
+ "rpcRetries": 9,
+ "volumeSwaps": 7,
+ "volumeSwapFails": 3,
+ "maxRentSol": 0.04191,
+ "avgGasSol": 0.000015,
+ "usd10": {
+  "n": 0,
+  "fees": 0,
+  "pnl": 0,
+  "gas": 0
+ },
+ "usd50": {
+  "n": 1,
+  "fees": 0.001,
+  "pnl": 0.001,
+  "gas": 0.000015
+ },
+ "mainWallet": {
+  "start": 59.67587016,
+  "afterFunding": 58.6932306,
+  "end": 59.4931706,
+  "spent": 0.1827
+ },
+ "results": [
+  {
+   "trader": 1,
+   "cycle": 0,
+   "usd": 10,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "error": "429 Too Many Requests: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32029,\"message\":\"Too Many Requests, Please apply an OnFinality API key or contact us to receive a highe",
+   "sec": 14.4
+  },
+  {
+   "trader": 0,
+   "cycle": 0,
+   "usd": 10,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "failed to get info about account AEF4WRyaTCigR5VTipsEbMW4SdD52wv2bqCASwjdLcqF: Error: 429 Too Many Requests: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32029,\"message\":\"",
+   "sec": 41.4
+  },
+  {
+   "trader": 0,
+   "cycle": 1,
+   "usd": 50,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "error": "429 Too Many Requests: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32029,\"message\":\"Too Many Requests, Please apply an OnFinality API key or contact us to receive a highe",
+   "sec": 8.5
+  },
+  {
+   "trader": 1,
+   "cycle": 1,
+   "usd": 50,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": true,
+   "sigOpen": "3ofCBkDGkWhSzz8gaBbGVdvQJRZy48hzWANRidr8VxZe38bzxSxkopW1aXdmoSi422AyzBPumpWRbgsemQgiPox1",
+   "rentSol": 0.04191,
+   "feeX": 0.000494,
+   "feeY": 0.000534,
+   "sigExit": [
+    "4dsuXHQWdpPEeFmg2H1n5nrJpZAeAN6jnQ65NjwHf7VFRrBNurerH8PEEANJqw7XMEdQeaqBCxw3YVU2bjsRPw8g"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.001,
+   "feesUsd": 0.001,
+   "sec": 176.6
+  }
+ ]
+}

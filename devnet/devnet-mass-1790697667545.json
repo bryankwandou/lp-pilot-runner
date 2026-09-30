@@ -1,0 +1,566 @@
+{
+ "at": "2026-09-29T16:01:07.545Z",
+ "cluster": "devnet",
+ "pool": "AAbtb7VFDTM5VAzfQiXHWubCKUVh79Pk1Q73T9h7mpVG",
+ "traders": 3,
+ "cycles": 8,
+ "wallSec": 716,
+ "total": 24,
+ "ok": 24,
+ "failed": 0,
+ "rpcRetries": 76,
+ "orphansClosed": 0,
+ "orphansLeft": 0,
+ "volumeSwaps": 32,
+ "volumeSwapFails": 5,
+ "binRange": [
+  -5,
+  9
+ ],
+ "maxRentSol": 0.04191,
+ "avgGasSol": 0.000014999999999999999,
+ "bySize": {
+  "10": {
+   "n": 4,
+   "fees": 0.0151,
+   "pnl": 0.0097,
+   "gas": 0.00006
+  },
+  "15": {
+   "n": 5,
+   "fees": 0.08399999999999999,
+   "pnl": 0.0362,
+   "gas": 0.00007500000000000001
+  },
+  "50": {
+   "n": 6,
+   "fees": 0.0274,
+   "pnl": -0.0075,
+   "gas": 0.00009
+  },
+  "75": {
+   "n": 5,
+   "fees": 0.33649999999999997,
+   "pnl": 0.35100000000000003,
+   "gas": 0.00007500000000000001
+  },
+  "750": {
+   "n": 4,
+   "fees": 0.48850000000000005,
+   "pnl": -0.277,
+   "gas": 0.00006
+  }
+ },
+ "mainWallet": {
+  "start": 102.34102684,
+  "afterFunding": 75.37378068,
+  "end": 83.3661538,
+  "spent": 18.974873
+ },
+ "results": [
+  {
+   "trader": 1,
+   "cycle": 0,
+   "usd": 15,
+   "strategy": "Curve",
+   "width": 10,
+   "side": "quote",
+   "ok": true,
+   "sigOpen": "2un5M6Twnn9Xw6CSjPbomFubavr4muXyDrH2Qu1enJukY7UbDn5NgqX8QhoZDPVKBxVBT2mMFxqYKQiaNRNakbHw",
+   "rentSol": 0.04191,
+   "feeX": 0.027737,
+   "feeY": 0,
+   "sigExit": [
+    "4TFtAgTV6W8GSz675QijBtpjyFmxn1opepKY8S4L5dcQ3aENprVvYBcEKPAwiFw13aqHk1MMvyKdcnHhW9Svz427"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.0176,
+   "feesUsd": 0.0276,
+   "sec": 38.8
+  },
+  {
+   "trader": 0,
+   "cycle": 0,
+   "usd": 10,
+   "strategy": "Spot",
+   "width": 6,
+   "side": "dua",
+   "ok": true,
+   "sigOpen": "Jw75PJFvEFpEi4AY8uoiyGJf9hHwWFmbidznERna5XWC8Z422BRcG2vzHS1i4bSR298Lo3CRQtDNcFtY6SVvL5L",
+   "rentSol": 0.04191,
+   "feeX": 0.015145,
+   "feeY": 0,
+   "sigExit": [
+    "5QxzgxAqESnAbm2U3juXwND4fcergHG27Vo3rsjeF9uf4kJZEFefbqva4bkVmfEPTvSA7xySGKyabNDyfsBR9yMX"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.0097,
+   "feesUsd": 0.0151,
+   "sec": 56.4
+  },
+  {
+   "trader": 2,
+   "cycle": 0,
+   "usd": 50,
+   "strategy": "BidAsk",
+   "width": 20,
+   "side": "token",
+   "ok": true,
+   "sigOpen": "42sahLdMhyGZyTASf7QchRaUWK1S3n3BLG49mV2oX7yGjtxQjjmummwi6LiA65bR5c9YZAXeA17ULE6Xs25Es8tV",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "2PHQRdNRbD2PJd7W4K43cPvuDUCPpgzTsDKSwN4DFwa6VA4cbPQouGpVHMKh2aEFBCqH1FysTgr4iVaB6KgDo56D"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0,
+   "feesUsd": 0,
+   "sec": 77.2
+  },
+  {
+   "trader": 2,
+   "cycle": 1,
+   "usd": 75,
+   "strategy": "Spot",
+   "width": 6,
+   "side": "dua",
+   "ok": true,
+   "sigOpen": "217p4cUwE256Pux5ozw9MFSc117MZ4WRx6LHbSVUc4nyodhebWyKMz9DFBui4cyainhaou7BVF6GMrJW4YbeyG2X",
+   "rentSol": 0.04191,
+   "feeX": 0.114639,
+   "feeY": 0,
+   "sigExit": [
+    "3MCb8LsauNXJ3ugdxxFPjQkf8H6EZ8WW2UqW4tcPp1Qq1cYEvzAooaXryqLX84S9KY1bFHAABbP21ZbtqjWXuf5p"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.0894,
+   "feesUsd": 0.1135,
+   "sec": 54.5
+  },
+  {
+   "trader": 0,
+   "cycle": 1,
+   "usd": 15,
+   "strategy": "Curve",
+   "width": 10,
+   "side": "quote",
+   "ok": true,
+   "sigOpen": "2FDNBrNuvsuP2UX5rvTu4wiARtK7JhzPbTu3PgEhD3kfD2REE6qbqmqeWkwB43byAB2CzmHt5wUHX2kXT8F3pK7h",
+   "rentSol": 0.04191,
+   "feeX": 0.027229,
+   "feeY": 0,
+   "sigExit": [
+    "5JWR3mN5UZdC1w3E6Bb8wWPDaQ461NfhcbKg435X3XkK9L46NAPZCWj8BFwBpF3ZBS5bDHBCN8iVezBvaonpHhXK"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.0092,
+   "feesUsd": 0.027,
+   "sec": 87.3
+  },
+  {
+   "trader": 1,
+   "cycle": 1,
+   "usd": 50,
+   "strategy": "BidAsk",
+   "width": 20,
+   "side": "token",
+   "ok": true,
+   "sigOpen": "3CtW1euF8fANqAXtwceZTV2xn2tuvL1VZAAAoSyPMrsUfT3FnDvyvC1Tp5ypX9Hm3EN8iyygt25w6X665TUjjiy6",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "5siBiAmH3E96eQun8VE4HRqLdTvdXAfTpae1WbmtAnSGxWVPjhRuUcV1WQGWFusJ4ZxWPReSvCrs3a37mWgdc8pC"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0,
+   "feesUsd": 0,
+   "sec": 120.5
+  },
+  {
+   "trader": 0,
+   "cycle": 2,
+   "usd": 50,
+   "strategy": "BidAsk",
+   "width": 20,
+   "side": "token",
+   "ok": true,
+   "sigOpen": "4MZhAbkpAuzZ8D9PawJaPU6GCFktDA5YoNmwa9K8BZYLuXZNskbnmpLdeYZkjaV8hgAWTfYo1pftMUmZLZF1FkGd",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "325o7KGk9ZZFs18Y6NV8ug6Np1x1HnTdUSfQqgyr8nuVyamTWPYEXL9N8whwk8RvkKzwmRFN7PksGBS3uAUayUrs"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0,
+   "feesUsd": 0,
+   "sec": 40.8
+  },
+  {
+   "trader": 2,
+   "cycle": 2,
+   "usd": 750,
+   "strategy": "Curve",
+   "width": 10,
+   "side": "quote",
+   "ok": true,
+   "sigOpen": "45sh5mW1R7wSTbqw1R54b4dTu76uGm4MCy6cR2JNRJkpXeJvjRT5WjQqf43djbrFbReLsceQp8dPTnLqKgKYzT3L",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "4uoAVN1JoDBNzvKE6YLLMvFJZSsuuAesyCfBGu4Y8Ec6gqi6FtLJCmPwiQEkNXYvJmC2gFr7MWEDYf3s1UMXHVoH"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0,
+   "feesUsd": 0,
+   "sec": 61.9
+  },
+  {
+   "trader": 1,
+   "cycle": 2,
+   "usd": 75,
+   "strategy": "Spot",
+   "width": 6,
+   "side": "dua",
+   "ok": true,
+   "sigOpen": "AmqjxA8QsM22u5snoDMoeAXVSdtcGPEfvYnwmAaX7nq9xkvgwC8k8QQA5fpvt4NsYAs3m6hbuoToRPnye4NXRoQ",
+   "rentSol": 0.04191,
+   "feeX": 0.032747,
+   "feeY": 0,
+   "sigExit": [
+    "QiN2uqRpdPEybAa5Hd9gdsBU7wH9LksuLm6HCEGh2E515LpiGSP2K1SsWgzBNvXGM7e2Ei4vdxySUo3A6q1gezE"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.1155,
+   "feesUsd": 0.0327,
+   "sec": 110.8
+  },
+  {
+   "trader": 0,
+   "cycle": 3,
+   "usd": 75,
+   "strategy": "Spot",
+   "width": 6,
+   "side": "dua",
+   "ok": true,
+   "sigOpen": "2ndxo9NvqoVBQgHypgAoWkaCAD12vhr6BCL2FXdWMoacGMLDo5mUaW81dwR7sW1sbgh6LLVr4DwG7V54cjj4uoJX",
+   "rentSol": 0.04191,
+   "feeX": 0.054634,
+   "feeY": 0.130299,
+   "sigExit": [
+    "4xCg3WuCp89QaWHtTcCaQ2FxAFbSWEyazkMCcb1qEmzntKXKDjtPyfydYSPr1SHWVz4W3B7aXmE6g4mBQTgAgq6Z"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.1418,
+   "feesUsd": 0.1848,
+   "sec": 86.6
+  },
+  {
+   "trader": 2,
+   "cycle": 3,
+   "usd": 10,
+   "strategy": "BidAsk",
+   "width": 20,
+   "side": "token",
+   "ok": true,
+   "sigOpen": "29avGuwWuKSkfuKK9shHuLQHn7Zq8grWsz4wBxuUf6hXW8SUpRnJfDWuXMF6XLuhadu6CouFt6RxwjfxGToxUm2y",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "2LQdRzEMeWf9r8NtCT2FLPgQJsm1yWx78DaHiNZvji3uHprwebqdCJT8bLRVJF49TTwvun5cqtSfeUUdp9Rrjwi8"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0,
+   "feesUsd": 0,
+   "sec": 122.7
+  },
+  {
+   "trader": 0,
+   "cycle": 4,
+   "usd": 750,
+   "strategy": "Curve",
+   "width": 10,
+   "side": "quote",
+   "ok": true,
+   "sigOpen": "NBtCCof4QUusuHtARQCRqVM2kEpw5hEqEy73zDjRnWjDomUiqwKUMGg8wZfy2P4SWkb8TzpzFxvEXNa8Bde4usY",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0.127181,
+   "sigExit": [
+    "4h963keqNJujwdzyzxyRuCwz3LpYAFWHRSUbtRaPeXWPxuu6oL28PZ7uXWcpaXh8PWQmJfcADCa2JxFeXoSMKSdh"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": -0.0322,
+   "feesUsd": 0.1272,
+   "sec": 97.2
+  },
+  {
+   "trader": 1,
+   "cycle": 3,
+   "usd": 750,
+   "strategy": "Curve",
+   "width": 10,
+   "side": "quote",
+   "ok": true,
+   "sigOpen": "3BUU8JsDX3SbW9s9TiPjZvu9KKXFFZ2RBmp1EgN5rNdzf94tb99hfiD9ASZwLXABSucXDMa2CtXNnh1VdHYwjtxW",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0.12718,
+   "sigExit": [
+    "5S61g8T3QTzAHJT65yGijfcPLpfstdtnUAeU9GZmMCYGtasZRLyZKGfFX5vw4tQbZky6fw5LEqgUeEBtg8f1EtDS"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": -0.0327,
+   "feesUsd": 0.1272,
+   "sec": 110.1
+  },
+  {
+   "trader": 2,
+   "cycle": 4,
+   "usd": 15,
+   "strategy": "Spot",
+   "width": 6,
+   "side": "dua",
+   "ok": true,
+   "sigOpen": "5ZNgLSuCALx7ncGM6wJwq5itgryVDkMBZ4rtM6GdmmrQ4e3Wa5yXx7f37SyknBjwuDx4zabiMipFs7T3P7SyoRDc",
+   "rentSol": 0.04191,
+   "feeX": 0.02948,
+   "feeY": 0,
+   "sigExit": [
+    "3pfJ3vWih72XNZ7Cv4EAWZJn8xuSRCJb8eCkDNn8vfRu8LCZ55ZbLPx7LySwAowd8swwn3BgDeVf7WkJSWZZHXaF"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": -0.0019,
+   "feesUsd": 0.0294,
+   "sec": 96.9
+  },
+  {
+   "trader": 1,
+   "cycle": 4,
+   "usd": 10,
+   "strategy": "BidAsk",
+   "width": 20,
+   "side": "token",
+   "ok": true,
+   "sigOpen": "5PjGH3MW5REhpormztfmzFDXYKq1tgSAGS2kZC8WwhGhHXhwVdkG32P18hPMgj5khNcwNEVEC9vp61mdc44vcXqD",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "27rfYYTsNxob7detWwFgNR4wEqsCU2AnSwQ4iFjeiGag4MPX1BJr6YEpWLigqj6usPi6331xUPpys5JsqyJtbQtP"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0,
+   "feesUsd": 0,
+   "sec": 61.9
+  },
+  {
+   "trader": 0,
+   "cycle": 5,
+   "usd": 10,
+   "strategy": "BidAsk",
+   "width": 20,
+   "side": "token",
+   "ok": true,
+   "sigOpen": "nZveUfKRxHSgaU2BwJsKLqnjVKb5GhfRHm6wNYgykByxaAHfYTGMCVw9QuVkXFBAM73HjqyCAHFLaP6MECQ1uUE",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "2XtQULPYwpkUAx68KKhdVT1VuRFLG1GCCqW9cfViZXfpp7KPdnVtKUbhiDrAdNTYgCCbjaWmcEUnkcapz6abYWxf"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0,
+   "feesUsd": 0,
+   "sec": 91.9
+  },
+  {
+   "trader": 2,
+   "cycle": 5,
+   "usd": 50,
+   "strategy": "Curve",
+   "width": 10,
+   "side": "quote",
+   "ok": true,
+   "sigOpen": "5WaynNFDoEVrzXwf8o4GBNAk1eaevSE7472rLYfg2ezgAZLYdGQAV7xc3krMkjhbNoENreriCCdHvwQyUbgvyry8",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "4aekdQ53GuWKLT364sGxouVRXRvMEKjLaVgDt1rY2SuAdPXyoxiEiKXDyeccEpYnefQmWJEEi2jcdURZki4Cme3k"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0,
+   "feesUsd": 0,
+   "sec": 79.5
+  },
+  {
+   "trader": 0,
+   "cycle": 6,
+   "usd": 15,
+   "strategy": "Spot",
+   "width": 6,
+   "side": "dua",
+   "ok": true,
+   "sigOpen": "HdsxoZy7yCR1RmYx1x6LEVuy3uhWVHpAKePKV7f4ghieUvfeLNbD2hG6XrFtYtDJMLNVxpKQMep2vrpxsZ6N9Z9",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "4a9b3tA9k9BRxJWwCkRTStBCvFPjRhhoECVpTAnevGud8vdL74fmw8ZebyrEcAQcLGZ6sj9ddG5V8b2YQzeVqt8m"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": -0.0023,
+   "feesUsd": 0,
+   "sec": 52.6
+  },
+  {
+   "trader": 2,
+   "cycle": 6,
+   "usd": 75,
+   "strategy": "BidAsk",
+   "width": 20,
+   "side": "token",
+   "ok": true,
+   "sigOpen": "2y3AQCYxjsbvSbJEXzDjX1wbCJ7MAnhRZMPiRiTwAqrgDwW59iaSHqX7wZh2fy5TfkVqgrzU9zCBGswBcDQxKnxR",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0.005472,
+   "sigExit": [
+    "67HEaL5mNkv51wUWEgd11hsqFh96BugJ56BaeRffWjYqNMQQjsTzgSaJ8N5eeBLbfJoKoHq4CDjt72FY4ekJFKjM"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.0043,
+   "feesUsd": 0.0055,
+   "sec": 75.5
+  },
+  {
+   "trader": 1,
+   "cycle": 5,
+   "usd": 15,
+   "strategy": "Spot",
+   "width": 6,
+   "side": "dua",
+   "ok": true,
+   "sigOpen": "4DwqFiypBf5c9rHWpfzQDC7bXndMhvQhKHcgsVpvL1zTHLPto8nRo12a28pd6rnTpXwrfi2hCDqjdep5CfQ2NPFD",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "3YurirSQjSkHRHgyNAbDo5BzwBuqxPu3yrobd4Wx3A49aFDBcCBknuxdS9dyweuQHMb2SZbTcUvHowEgBmU56Q4z"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.0136,
+   "feesUsd": 0,
+   "sec": 132.9
+  },
+  {
+   "trader": 0,
+   "cycle": 7,
+   "usd": 50,
+   "strategy": "Curve",
+   "width": 10,
+   "side": "quote",
+   "ok": true,
+   "sigOpen": "3h9UVmXwBovXrwfwZnfrX9q3EE51tJ4o5DhcrfmRYrkoqf8vUT2sz6h1LDJsRV551f35PRbiQivptyryr4oNppHg",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "2VwZizcFmwpGuaruRSjV1KMqeYBXzs1iyzsLjZaxci7Vwbdw237qmefewSeoET41xhaVdjCjQZgEMwzLmJWv77Vs"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0,
+   "feesUsd": 0,
+   "sec": 104
+  },
+  {
+   "trader": 1,
+   "cycle": 6,
+   "usd": 50,
+   "strategy": "Curve",
+   "width": 10,
+   "side": "quote",
+   "ok": true,
+   "sigOpen": "2qvHTFhp2PV34CQp9QU7NDTBHRszj7RFH7JsoqxLFZm8x6yT3Ez1W7mBqYWZaAKeTJNAUcL2TwtQa94uCKkhhiRm",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0.027404,
+   "sigExit": [
+    "3guZehvEJ9HriYRJXrM3yaYYdUMQpZwTwaBg43JGxo6NznLMrNrdFP7f6LQSN9J9RrAg9QVpCy3khYS1yrx8bJ26"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": -0.0075,
+   "feesUsd": 0.0274,
+   "sec": 83.7
+  },
+  {
+   "trader": 2,
+   "cycle": 7,
+   "usd": 750,
+   "strategy": "Spot",
+   "width": 6,
+   "side": "dua",
+   "ok": true,
+   "sigOpen": "2RWHduRfXcox15ce91AE4JbviHRKL2BTn72BjYSAWXpyfP2PJVciYpxDCoZxxEjBfsXGnYREwzt7a53n3zBNAuit",
+   "rentSol": 0.04191,
+   "feeX": 0.229499,
+   "feeY": 0,
+   "sigExit": [
+    "3XKo1r72pAQG3njue1rwmEMKvNfymyHU6vXamwdg4XMieJGPHYaBSNx8Nx2mJMsX27456janjScBYJqoUGfB5Q3N"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": -0.2121,
+   "feesUsd": 0.2341,
+   "sec": 90.5
+  },
+  {
+   "trader": 1,
+   "cycle": 7,
+   "usd": 75,
+   "strategy": "BidAsk",
+   "width": 20,
+   "side": "token",
+   "ok": true,
+   "sigOpen": "3da7rMYEA5DAQikwD5D71Sgfu2GEpUdfTUe275zeE9UKVMdcnAdUwY8384X2eV1swwnxND3yhyx5oAc7qbvdUEcq",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "4HBCLYbCZJBnanA3jknh5Zc4ZtceyJce1Fz157n4zkCCaqFsuc9UAK9cbs6d64jt3JvZxP8MJbAza3uTNdCvnS93"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0,
+   "feesUsd": 0,
+   "sec": 49.7
+  }
+ ]
+}

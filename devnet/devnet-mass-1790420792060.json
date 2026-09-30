@@ -1,0 +1,671 @@
+{
+ "at": "2026-09-26T11:06:32.060Z",
+ "cluster": "devnet",
+ "pool": "2YcC2aLLrL1crfiHKthfTsRhcMqacPHdS4VspY9aYbot",
+ "traders": 6,
+ "cycles": 8,
+ "wallSec": 1838,
+ "total": 48,
+ "ok": 10,
+ "failed": 38,
+ "rpcRetries": 638,
+ "volumeSwaps": 22,
+ "volumeSwapFails": 29,
+ "maxRentSol": 0.04191,
+ "avgGasSol": 0.000015000000000000002,
+ "bySize": {
+  "10": {
+   "n": 1,
+   "fees": 0,
+   "pnl": 0,
+   "gas": 0.000015
+  },
+  "15": {
+   "n": 2,
+   "fees": 0.0021,
+   "pnl": -0.0055000000000000005,
+   "gas": 0.00003
+  },
+  "50": {
+   "n": 4,
+   "fees": 0.0797,
+   "pnl": 0.055099999999999996,
+   "gas": 0.00006
+  },
+  "75": {
+   "n": 2,
+   "fees": 0.0004,
+   "pnl": -0.00030000000000000003,
+   "gas": 0.00003
+  },
+  "750": {
+   "n": 1,
+   "fees": 0.092,
+   "pnl": 0.092,
+   "gas": 0.000015
+  }
+ },
+ "mainWallet": {
+  "start": 29.98689528,
+  "afterFunding": 4.44282836,
+  "end": 119.90843448,
+  "spent": -89.921539
+ },
+ "results": [
+  {
+   "trader": 3,
+   "cycle": 0,
+   "usd": 75,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"5e6a2e1b-9387-4195-9cb1-8d3e7a12058a\" } \r\n",
+   "sec": 134.7
+  },
+  {
+   "trader": 5,
+   "cycle": 0,
+   "usd": 10,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": false,
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"08c22",
+   "sec": 149.8
+  },
+  {
+   "trader": 1,
+   "cycle": 0,
+   "usd": 15,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"e3003",
+   "sec": 295.6
+  },
+  {
+   "trader": 4,
+   "cycle": 0,
+   "usd": 750,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": true,
+   "sigOpen": "RD12SHooodsG37eSrySMs5tRRtAbNML74pFUDQ2vpgZ8zs4CBHr1T1uZ44D8GqSjEeSzwczenCy4Voj8abjZxxp",
+   "rentSol": 0.04191,
+   "feeX": 0.092005,
+   "feeY": 0,
+   "sigExit": [
+    "3J4HQfx7JYmYqD64hddnGgaadqeXesF87crJj5oa3p3h6MorHvL4Bc3on7j3xE8LqC43UuQCzymfmwB5GEZpsQnY"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.092,
+   "feesUsd": 0.092,
+   "sec": 297.9
+  },
+  {
+   "trader": 2,
+   "cycle": 0,
+   "usd": 50,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": true,
+   "sigOpen": "3qtmCYRkvybwqjRMJBRRZpB52j2kfRkyPdaMcNkyLvmEymRqJE8nSXa3yvK7iAMw2mdjXVAs3DnigdQbz7Pqd93L",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "HamSekg32L8fExXdQRu4GbZgVZASapeU86MEKfKR3EDAi6SSxgS8u8msVeUPBMjydonzVYzDaiLohtsENhQeVmb"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.0002,
+   "feesUsd": 0,
+   "sec": 343.3
+  },
+  {
+   "trader": 3,
+   "cycle": 1,
+   "usd": 750,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"e84f4",
+   "sec": 241.6
+  },
+  {
+   "trader": 0,
+   "cycle": 0,
+   "usd": 10,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "sigOpen": "3odBGJRWT7ELHWhYjm4AGiPCx4MQLoQR7tkDahGNX1AKdktV6n8kAw7ybnZSKZjeKWsLMpX9mjZHe4hxcjmZduxY",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [],
+   "error": "Simulation failed. \nMessage: Transaction simulation failed: Error processing Instruction 5: custom program error: 0xbbf. \nLogs: \n[\n  \"Program ATokenGPvbdGVxr1b2",
+   "sec": 418.8
+  },
+  {
+   "trader": 5,
+   "cycle": 1,
+   "usd": 15,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "sigOpen": "jofhMUxQ1HmqcoxKYf6y7kwzNdrsAXeBtMfmFx3A5BLrWsLVKT5MQCzRBgQqvRGNyAuWGHhzvfuUNCw6xW1fUDv",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [],
+   "error": "Simulation failed. \nMessage: Transaction simulation failed: Error processing Instruction 5: custom program error: 0xbbf. \nLogs: \n[\n  \"Program ATokenGPvbdGVxr1b2",
+   "sec": 295.7
+  },
+  {
+   "trader": 2,
+   "cycle": 1,
+   "usd": 75,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"5a09bb3a-2812-4b3d-b428-d646af699eed\" } \r\n",
+   "sec": 113.4
+  },
+  {
+   "trader": 3,
+   "cycle": 2,
+   "usd": 10,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": false,
+   "error": "Simulation failed. \nMessage: Transaction simulation failed: Error processing Instruction 1: custom program error: 0x0. \nLogs: \n[\n  \"Program ComputeBudget1111111",
+   "sec": 145.2
+  },
+  {
+   "trader": 4,
+   "cycle": 1,
+   "usd": 10,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": false,
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"5b943",
+   "sec": 216.6
+  },
+  {
+   "trader": 0,
+   "cycle": 1,
+   "usd": 15,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"64569",
+   "sec": 154.7
+  },
+  {
+   "trader": 1,
+   "cycle": 1,
+   "usd": 50,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": false,
+   "sigOpen": "38jPdZ7hhuCAQhS1J5r6iDFL5sZkKDYgfXenF1QkuZco1QRm3pAcWREnDsjnLG7jutbAocXHoZcg5P3PDsrpWbtM",
+   "rentSol": 0.04191,
+   "error": "429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"faf8cdd2-efab-44eb-a6bc-45a469b1917b\" } \r\n",
+   "sec": 315.9
+  },
+  {
+   "trader": 3,
+   "cycle": 3,
+   "usd": 15,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "Simulation failed. \nMessage: Transaction simulation failed: Error processing Instruction 1: custom program error: 0x0. \nLogs: \n[\n  \"Program ComputeBudget1111111",
+   "sec": 116.5
+  },
+  {
+   "trader": 2,
+   "cycle": 2,
+   "usd": 750,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "error": "failed to get info about account DfDWVqq4iDnD3nefYcqti3JdjMaefChGxPHpvwm4SteQ: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"",
+   "sec": 190.7
+  },
+  {
+   "trader": 4,
+   "cycle": 2,
+   "usd": 15,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"d8218397-b8dd-4ea1-b1e5-3ffbb896a4cd\" } \r\n",
+   "sec": 157.6
+  },
+  {
+   "trader": 5,
+   "cycle": 2,
+   "usd": 50,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "sigOpen": "3bJ6GHjdbFfTZ6Y6WBqgwPr7YGdjCPuWhD8upSkNm2ay7mnSB7uoaosfNGtithxYw8pww3ZtUEan346Y7uX9v7Md",
+   "rentSol": 0.04191,
+   "error": "429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"d3fc8045-1936-418c-9b77-4d7794545888\" } \r\n",
+   "sec": 239
+  },
+  {
+   "trader": 1,
+   "cycle": 2,
+   "usd": 75,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "Simulation failed. \nMessage: Transaction simulation failed: Error processing Instruction 1: custom program error: 0x0. \nLogs: \n[\n  \"Program ComputeBudget1111111",
+   "sec": 132.8
+  },
+  {
+   "trader": 2,
+   "cycle": 3,
+   "usd": 10,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": false,
+   "error": "failed to get info about account CWV12aDLABDkRXfb45pxqqAx1oSB6eR9rShXUqtt8ng4: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"",
+   "sec": 137.6
+  },
+  {
+   "trader": 5,
+   "cycle": 3,
+   "usd": 75,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": false,
+   "sigOpen": "2axELxftyX5Xdv7jzYjvX7ScRcsiGHoCDeMAWapyQ3UwbrwvVNWrFwQ9xE2mipLhHWbdBXJ9zJWhiLRGteZNEx1v",
+   "rentSol": 0.04191,
+   "error": "429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"7249b15a-4268-405a-a386-9e398cf7173e\" } \r\n",
+   "sec": 173.6
+  },
+  {
+   "trader": 3,
+   "cycle": 4,
+   "usd": 50,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "sigOpen": "88upeLGj3V9UyV11JqD3PVVetw19rwWqSjBzF3jhXxsfrt1phAJ4aZcXpkmXX8sxhpwvzF2QjoVGnKcPMpbG4Wn",
+   "rentSol": 0.04191,
+   "error": "429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"6af25b79-a441-4256-a16c-6fa8690bb5f2\" } \r\n",
+   "sec": 236.6
+  },
+  {
+   "trader": 0,
+   "cycle": 2,
+   "usd": 50,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": false,
+   "sigOpen": "5W41f7SWdL1eok3MuKTLBUDBCXE9WEmm1YiuU5dkMLVKHE6g1FkLsFSQ2bYSgCF9W6hz5psaQSDuBwqFMX891YFT",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [],
+   "error": "429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"f148a202-6d0c-4566-abe8-6a51e7ebbccf\" } \r\n",
+   "sec": 339.6
+  },
+  {
+   "trader": 2,
+   "cycle": 4,
+   "usd": 15,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"92c75",
+   "sec": 151.4
+  },
+  {
+   "trader": 1,
+   "cycle": 3,
+   "usd": 750,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"d0e3a",
+   "sec": 208.8
+  },
+  {
+   "trader": 5,
+   "cycle": 4,
+   "usd": 750,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"1b61e",
+   "sec": 143.4
+  },
+  {
+   "trader": 4,
+   "cycle": 3,
+   "usd": 50,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"8fb9b",
+   "sec": 348.9
+  },
+  {
+   "trader": 3,
+   "cycle": 5,
+   "usd": 75,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": true,
+   "sigOpen": "2vhAhS7brLAfehcCdwAmfPpqgKrNjMo7FoQ3jgwSTo5pzMpTaxzT8xPW7rLp56qRZSwcSmKVwLSyhyE5uo4ukkCY",
+   "rentSol": 0.04191,
+   "feeX": 0.000398,
+   "feeY": 0,
+   "sigExit": [
+    "5PJWjv654pPCHE8jStXyVMzaUSMuF6yVzXx9geZXJuh3HKVRpPMi96oUMszJ44o7zyo1WMVBx15v3F97G81pyzEU"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": -0.0001,
+   "feesUsd": 0.0004,
+   "sec": 175.7
+  },
+  {
+   "trader": 0,
+   "cycle": 3,
+   "usd": 75,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"3133d",
+   "sec": 192.8
+  },
+  {
+   "trader": 2,
+   "cycle": 5,
+   "usd": 50,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "error": "failed to get info about account CWV12aDLABDkRXfb45pxqqAx1oSB6eR9rShXUqtt8ng4: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"",
+   "sec": 201.4
+  },
+  {
+   "trader": 5,
+   "cycle": 5,
+   "usd": 10,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "error": "failed to get info about account CWV12aDLABDkRXfb45pxqqAx1oSB6eR9rShXUqtt8ng4: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"",
+   "sec": 162.5
+  },
+  {
+   "trader": 1,
+   "cycle": 4,
+   "usd": 10,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": false,
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"a58ca",
+   "sec": 227.1
+  },
+  {
+   "trader": 4,
+   "cycle": 4,
+   "usd": 75,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": false,
+   "sigOpen": "cAtyCoLvWGGscjxC5LHU4d1bZTnf1Vpqo7YtiHmVx13VbMtuu8Qbqt9McSPzhT3YmkdKDy3ivP7z84bRgDwiDKz",
+   "rentSol": 0.04191,
+   "error": "429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"5cc53ed4-a964-49a0-ade5-8db8a6055305\" } \r\n",
+   "sec": 237.7
+  },
+  {
+   "trader": 3,
+   "cycle": 6,
+   "usd": 750,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "Simulation failed. \nMessage: Transaction simulation failed: Blockhash not found. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for fu",
+   "sec": 232.4
+  },
+  {
+   "trader": 2,
+   "cycle": 6,
+   "usd": 75,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": false,
+   "error": "failed to get info about account EXpwuBhDgj3TAJTKzRQWYNBts21kpyGzcKDukg77ozSi: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"",
+   "sec": 237.5
+  },
+  {
+   "trader": 5,
+   "cycle": 6,
+   "usd": 15,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": false,
+   "error": "failed to get info about account HFt5Ug612pf9ayXQvZsiR9Eu5d7epNKcwfg2WngYJZNA: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"",
+   "sec": 223.2
+  },
+  {
+   "trader": 0,
+   "cycle": 4,
+   "usd": 750,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "sigOpen": "2d1RTy45jAG7CigMdDS7CyedGNb9b8WzG45UEjvZhFZ26rSxR1bRBaV1SLF7cpkh561eBBZyfRhoSdimWBkgkzqU",
+   "rentSol": 0.04191,
+   "feeX": 0.045254,
+   "feeY": 0.111101,
+   "sigExit": [],
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"d37cb",
+   "sec": 334.4
+  },
+  {
+   "trader": 1,
+   "cycle": 5,
+   "usd": 15,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "failed to get recent blockhash: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"Connection rate limits exceeded\"}, \"id\": \"c194f",
+   "sec": 279
+  },
+  {
+   "trader": 3,
+   "cycle": 7,
+   "usd": 10,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "error": "failed to get info about account CWV12aDLABDkRXfb45pxqqAx1oSB6eR9rShXUqtt8ng4: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"",
+   "sec": 195.6
+  },
+  {
+   "trader": 4,
+   "cycle": 5,
+   "usd": 750,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "Simulation failed. \nMessage: Transaction simulation failed: Error processing Instruction 1: custom program error: 0x0. \nLogs: \n[\n  \"Program ComputeBudget1111111",
+   "sec": 244.3
+  },
+  {
+   "trader": 2,
+   "cycle": 7,
+   "usd": 750,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": false,
+   "error": "failed to get info about account CWV12aDLABDkRXfb45pxqqAx1oSB6eR9rShXUqtt8ng4: Error: 429 Too Many Requests:  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429, \"message\":\"",
+   "sec": 196
+  },
+  {
+   "trader": 5,
+   "cycle": 7,
+   "usd": 50,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": true,
+   "sigOpen": "292GhJzBEMtM9HXMs8iBXW8wzUyw2W6SPtbffJwfEzWhLWNZ9vtjaUnofMp6GMgg8vgT3EzqsXYu9Fg1bGgNeHMA",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0.004543,
+   "sigExit": [
+    "4JgWfmnCu2BjwjvmMJFpepto8umHFzSRKDwEXYYYAcLuUCVGih8GWZJN5yGVANNo8fYHf3jeP4mLuxaKH76aHe3n"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": -0.0054,
+   "feesUsd": 0.0045,
+   "sec": 222.3
+  },
+  {
+   "trader": 0,
+   "cycle": 5,
+   "usd": 10,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": true,
+   "sigOpen": "6T9LyK1756R6WBrxkJEPt2Gi4tMqDn2WVwXRC9FaQysGm2WMMEkzk9Sf7e9b9P5HHZZfZY5e76DuoXJPmJGbjUb",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0.000049,
+   "sigExit": [
+    "2NJKAzuLuJ9HWMbxvmNYhSHfqZjGqa5LDihMpabsaXRoyNHn812igXeDPg8JGPHyXA5GVHGXz6DLhV6fTF7kmzF7"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0,
+   "feesUsd": 0,
+   "sec": 204.9
+  },
+  {
+   "trader": 1,
+   "cycle": 6,
+   "usd": 50,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": true,
+   "sigOpen": "xzZDt2bKEtZNocrywMeeSVKw5RtQGtz3nNQnMiPd14Y3xq53uAXmjpNSQ82zA1aC1PuB5AwACkDZVe578Q5EN3q",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0.016309,
+   "sigExit": [
+    "2qsXPWzBUMhFbHrewWVoM4dA76o43xuWYhK37hdQhPinpof1oD8cRJ9fdAtYVxerenwNVBgv4T2aq5vbcpmS1J2M"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.0097,
+   "feesUsd": 0.0163,
+   "sec": 232.1
+  },
+  {
+   "trader": 0,
+   "cycle": 6,
+   "usd": 15,
+   "strategy": "Spot",
+   "width": 6,
+   "ok": true,
+   "sigOpen": "cXnLHzgFBJZ5SFKQpgowbLDbns1kWk7LtP3AgtpVA8nEpL6DETwwrmWka628DFMbJbvcDaxX4YpoBX7yRRzu8LJ",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0.001902,
+   "sigExit": [
+    "392Azqp4YUawQ4kTjKvka9ot6YHdo3qgMmXJBAeqjicGUZqyjS2ehZYgUTq9RwwZ3N5494LGpzQVywEQnHHMWzfU"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": -0.0057,
+   "feesUsd": 0.0019,
+   "sec": 68.8
+  },
+  {
+   "trader": 1,
+   "cycle": 7,
+   "usd": 75,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": true,
+   "sigOpen": "FqDr8qhAQB7aN7ur6LQcvFwyDA5XU44vtAxYFUdK3QHZWiQFc7LCA8evsEVdrroY4KAMTa964dVdGD1d9hPoYEd",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0,
+   "sigExit": [
+    "3nm9RVXTSeK61GrZ4uHSmRg6pgEwDozzdspbKN1NYT6u3MQ2wAoVxEDpmoXbc9CnJJjxhwKqbYEVcxM287E1kUQh"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": -0.0002,
+   "feesUsd": 0,
+   "sec": 61.6
+  },
+  {
+   "trader": 4,
+   "cycle": 6,
+   "usd": 10,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": false,
+   "sigOpen": "ojC1AS3QvXpqMBnrixuY3fm85p3nfuN5sd1vcZwMBbCCUZEdyBRQaEGbVBq5KDY3fGug7bfCCADdZxKm7cFFmZc",
+   "rentSol": 0.04191,
+   "feeX": 0,
+   "feeY": 0.002489,
+   "sigExit": [],
+   "error": "Simulation failed. \nMessage: Transaction simulation failed: Error processing Instruction 5: custom program error: 0xbbf. \nLogs: \n[\n  \"Program ATokenGPvbdGVxr1b2",
+   "sec": 243.9
+  },
+  {
+   "trader": 4,
+   "cycle": 7,
+   "usd": 15,
+   "strategy": "BidAsk",
+   "width": 20,
+   "ok": true,
+   "sigOpen": "5bkDdYoLe3hKgGbg4azF1Y3WsDtxyvMFC8MxP81H4iizvi7CZRSGLPtSYVL75DVtnHcQhW89X34Qv7REcbEo66oT",
+   "rentSol": 0.04191,
+   "feeX": 0.000077,
+   "feeY": 0.000079,
+   "sigExit": [
+    "5KyJaB3BzLzJyuUgKE47mp9KnAszPVaWeAar8q9LFyYVbaJYtDkiYP4qWZgXZnzGdZkE5aETfR52C8phjiUt3uPb"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.0002,
+   "feesUsd": 0.0002,
+   "sec": 60.5
+  },
+  {
+   "trader": 0,
+   "cycle": 7,
+   "usd": 50,
+   "strategy": "Curve",
+   "width": 10,
+   "ok": true,
+   "sigOpen": "3XAigWChzxzswezFLa42Vrp3xWPT7eEuHFBPc85EzcWYAxyrFhn3sELw2vAuHg9CCFojQt2SAWTxRRxceby8P5CK",
+   "rentSol": 0.04191,
+   "feeX": 0.024425,
+   "feeY": 0.034328,
+   "sigExit": [
+    "3RtnMg9dpzE2UzRqFs2XtBYWUhAD2kcrQHo4dLwu4Bckezwuu6pvtoR5Ysgqe2ioxzNvSwwwWS9XUSpwANsxxRfB"
+   ],
+   "closed": true,
+   "netSol": 0.000015,
+   "pnlUsd": 0.0506,
+   "feesUsd": 0.0589,
+   "sec": 121.9
+  }
+ ]
+}
