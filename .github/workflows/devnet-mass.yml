@@ -8,11 +8,12 @@ name: Devnet Mass Test
 on:
   workflow_dispatch:
     inputs:
-      markets: { description: "kondisi pasar (JSON)", default: '["acak","pump","dump","rug","sepi","tipis","whipsaw","pulih"]' }
-      shards: { description: "shard per pasar (JSON)", default: "[1,2,3]" }
-      traders: { description: "trader per shard", default: "3" }
-      cycles: { description: "siklus per trader", default: "8" }
-      sizes: { description: "ukuran posisi USDC uji", default: "10,15,50,75,750" }
+      markets: { description: "kondisi pasar (JSON)", default: '["acak","pump","dump","rug","sepi","tipis","whipsaw","pulih","pumpdump","turun-pelan","wick","ramai"]' }
+      shards: { description: "shard per pasar × ukuran (JSON)", default: "[1,2,3]" }
+      traders: { description: "trader per job (6 = semua pasangan sisi × keluar berjalan bersamaan)", default: "6" }
+      cycles: { description: "siklus per trader (9 = bentuk × lebar sekali penuh)", default: "9" }
+      sizes: { description: "ukuran posisi USDC uji, satu ukuran per job (JSON): 10 = minimum hakim, 75 ≈ 0,5 SOL saran mentor, 750 ≈ 5 SOL", default: "[10,75,750]" }
+      fund: { description: "SOL per trader (rent + gas, disapu balik)", default: "0.25" }
       sides: { description: "sisi deposit bergiliran: dua, quote (setara SOL side), token", default: "dua,quote,token" }
       exits: { description: "aturan keluar bergiliran: tahan (jendela tetap), jaga (tutup saat keluar range)", default: "tahan,jaga" }
 
@@ -22,13 +23,14 @@ permissions:
 jobs:
   shard:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 90
     strategy:
       fail-fast: false
       # Sisakan slot untuk paper loop (1 job, harus selalu bisa jalan) dari batas 20 job serentak per akun.
       max-parallel: 18
       matrix:
         market: ${{ fromJSON(inputs.markets) }}
+        size: ${{ fromJSON(inputs.sizes) }}
         shard: ${{ fromJSON(inputs.shards) }}
     steps:
       - uses: actions/checkout@v4
@@ -45,7 +47,8 @@ jobs:
           KEY: ${{ secrets.DEVNET_MASS_KEYPAIR }}
           TRADERS: ${{ inputs.traders }}
           CYCLES: ${{ inputs.cycles }}
-          SIZES: ${{ inputs.sizes }}
+          SIZES: ${{ matrix.size }}
+          FUND_SOL: ${{ inputs.fund }}
           SIDES: ${{ inputs.sides }}
           EXITS: ${{ inputs.exits }}
           MARKET: ${{ matrix.market }}
@@ -57,7 +60,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: devnet-mass-${{ matrix.market }}-${{ matrix.shard }}
+          name: devnet-mass-${{ matrix.market }}-${{ matrix.size }}-${{ matrix.shard }}
           path: bot/paper/devnet-mass-*.json
 
   collect:
