@@ -57,6 +57,8 @@ jobs:
           MARKET: ${{ matrix.market }}
         run: |
           test -n "$KEY" || { echo "secret DEVNET_MASS_KEYPAIR kosong"; exit 1; }
+          # Hasil lama ikut ter-checkout dari repo bot; hapus supaya artifact hanya berisi hasil job ini.
+          rm -f paper/devnet-mass-*.json
           umask 077; printf '%s' "$KEY" > "$RUNNER_TEMP/k.json"
           DEVNET_KEYPAIR="$RUNNER_TEMP/k.json" node src/devnet-mass.mjs
           rm -f "$RUNNER_TEMP/k.json"
