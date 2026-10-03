@@ -14,7 +14,7 @@ on:
       cycles: { description: "siklus per trader (9 = bentuk × lebar sekali penuh)", default: "9" }
       sizes: { description: "ukuran posisi USDC uji, satu ukuran per job (JSON): 10 = minimum hakim, 75 ≈ 0,5 SOL saran mentor, 750 ≈ 5 SOL", default: "[10,75,750]" }
       fund: { description: "SOL per trader (rent + gas, disapu balik)", default: "0.25" }
-      swap: { description: "1 = modal paus: token dibeli/dijual lewat swap di pool itu sendiri saat masuk/keluar (dampak harga ikut dihitung)", default: "0" }
+      extra: { description: 'env tambahan (JSON), mis. {"SWAP_ENTRY":"1"} untuk modal paus, atau strategi mentor {"QUOTE":"sol","BIN_STEP":"100","BINS":"69,230","SHAPES":"BidAsk,Spot","BASE_LIQ":"20"}', default: "{}" }
       parallel: { description: "job serentak (batas akun GitHub Free 20, paper loop butuh 1)", default: "18" }
       sides: { description: "sisi deposit bergiliran: dua, quote (setara SOL side), token", default: "dua,quote,token" }
       exits: { description: "aturan keluar bergiliran: tahan (jendela tetap), jaga (tutup saat keluar range)", default: "tahan,jaga" }
@@ -51,10 +51,14 @@ jobs:
           CYCLES: ${{ inputs.cycles }}
           SIZES: ${{ matrix.size }}
           FUND_SOL: ${{ inputs.fund }}
-          SWAP_ENTRY: ${{ inputs.swap }}
           SIDES: ${{ inputs.sides }}
           EXITS: ${{ inputs.exits }}
           MARKET: ${{ matrix.market }}
+          # Dibaca devnet-mass.mjs (kunci huruf besar saja), menggantikan input swap lama.
+          EXTRA: ${{ inputs.extra }}
+          # Label unik per job: kunci operator/trader mode SOL diturunkan dari wallet utama + label ini, jadi SOL job yang
+          # mati di tengah bisa diambil kembali (src/devnet-sapu-sol.mjs) tanpa menyimpan kunci baru.
+          RUN_LABEL: gh-${{ github.run_id }}-${{ matrix.market }}-${{ matrix.size }}-${{ matrix.shard }}
         run: |
           test -n "$KEY" || { echo "secret DEVNET_MASS_KEYPAIR kosong"; exit 1; }
           # Hasil lama ikut ter-checkout dari repo bot; hapus supaya artifact hanya berisi hasil job ini.
@@ -65,7 +69,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: devnet-mass-${{ matrix.market }}-${{ matrix.size }}-${{ matrix.shard }}-s${{ inputs.swap }}
+          name: devnet-mass-${{ matrix.market }}-${{ matrix.size }}-${{ matrix.shard }}
           path: bot/paper/devnet-mass-*.json
 
   collect:
