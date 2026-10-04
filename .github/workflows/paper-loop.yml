@@ -40,6 +40,8 @@ jobs:
           while [ $(date +%s) -lt $end ]; do
             if timeout 240 node src/paper.mjs > tick.log 2>&1; then ok=$((ok+1)); else fail=$((fail+1)); tail -5 tick.log; fi
             grep -E "equity" tick.log | tail -1
+            # Copy-LP: catat posisi LP di 40 pool teramai tiap 15 tick (±15 menit), di latar supaya tick tidak tertunda.
+            n=$((ok+fail)); if [ $((n % 15)) -eq 1 ]; then (timeout 600 node src/lp-watch.mjs > watch.log 2>&1; tail -1 watch.log) & fi
             sleep 60
           done
           echo "selesai: $ok tick sukses, $fail gagal"
